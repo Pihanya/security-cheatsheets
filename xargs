@@ -1,0 +1,8 @@
+# Get one argument per command
+somecommand | xargs -L 1
+
+# Replace string {} with arugments
+somecommand | xargs -I {} anothercommand {}
+
+# Example usage
+ls -1 | xargs -L 1 -I {} rm {}
